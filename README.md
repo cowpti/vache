@@ -1,4 +1,4 @@
-vache [![GitHub version](https://badge.fury.io/gh/cowpti%2Fvache.svg)](http://badge.fury.io/gh/cowpti%2Fvache) [![Build Status](https://travis-ci.org/cowpti/vache.png)](https://travis-ci.org/cowpti/vache) [![Coverage](http://allthebadges.io/cowpti/vache/coveralls.png)](http://allthebadges.io/cowpti/vache/coveralls) [![Requirements Status](https://requires.io/github/cowpti/vache/requirements.svg?branch=master)](https://requires.io/github/cowpti/vache/requirements/?branch=master)
+vache [![GitHub version](https://badge.fury.io/gh/cowpti%2Fvache.svg)](http://badge.fury.io/gh/cowpti%2Fvache) [![Build Status](https://travis-ci.org/cowpti/vache.png)](https://travis-ci.org/cowpti/vache) [![Coverage Status](https://coveralls.io/repos/cowpti/vache/badge.png)](https://coveralls.io/r/cowpti/vache) [![Requirements Status](https://requires.io/github/cowpti/vache/requirements.svg?branch=master)](https://requires.io/github/cowpti/vache/requirements/?branch=master)
 =====
 
 la vache, c'est owptimisé !
