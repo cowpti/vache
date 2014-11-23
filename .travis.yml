@@ -3,9 +3,9 @@ python:
   - 3.4
 install:
   - pip install -r requirements.txt
-  - pip3 install coveralls
+  - pip install coverage
 script: # section obligatoire pour python
   echo "TODO"
-#   coverage run --source=moscowdjango,meetup manage.py test
-# after_success:
-#   coveralls
+  coverage run vache.py test
+after_success:
+  coveralls
