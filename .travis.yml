@@ -8,4 +8,4 @@ script: # section obligatoire pour python
   echo "TODO"
   coverage run vache.py test
 after_success:
-  coveralls
+  coverage
