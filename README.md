@@ -11,21 +11,22 @@ Du code qui consomme le moins possible, le plus efficacement possible. C'est une
 Nous avons utilisé les technologies suivantes :
 
 - Django
+- MongoDb
 
 #### Quels résultats ?
 Les tests sont réalisés avec [Funkload](https://github.com/nuxeo/FunkLoad) et seront visibles ici.
 
 Toujours pas convaincu ? Regardez plutôt [ça](http://www.thepartyanimal-blog.org/wp-content/uploads/2012/04/pancake_bunny.jpg).
 
-#### Documentation
-Nous avons une documentation [![Documentation Status](https://readthedocs.org/projects/vache/badge/?version=latest)](https://readthedocs.org/projects/vache/?badge=latest)
+#### Documentation [![Documentation Status](https://readthedocs.org/projects/vache/badge/?version=latest)](https://readthedocs.org/projects/vache/?badge=latest)
+Nous avons une documentation faite à [La Rache](http://byatoo.com/la-rache/index.php?p=page&name=presentation&id=2&PHPSESSID=221ntonktivpal4jldks0ira75).
 
 #### Dons
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg)](https://gratipay.com/on/github/cowpti/)
 
 #### Auteurs et contributeurs
-Pierre-Antoine Rault (@rigelk), Hugo Sanslaville, Ronan Bellego, Sabrina Mugiwara, Guillaume Rousset.
+Pierre-Antoine Rault ([@rigelk](https://github.com/rigelk)), Hugo Sanslaville, Ronan Bellego (Université de Nantes), et Sabrina Mugiwara, Guillaume Rousset (Polytech Nantes).
 
 #### Support / Contact
 Il suffit de contacter l'un de nous. [Pierre-Antoine Rault](mailto:pierre-antoine.rault@etu.univ-nantes.fr) se charge des mails pour l'instant.
