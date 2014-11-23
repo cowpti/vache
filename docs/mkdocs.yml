@@ -1,1 +1,5 @@
 site_name: Vache
+pages:
+- [index.md, Home]
+- [about.md, About]
+theme: readthedocs
