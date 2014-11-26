@@ -25,7 +25,7 @@ Nous avons une documentation faite à [La Rache](http://byatoo.com/la-rache/inde
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg)](https://gratipay.com/on/github/cowpti/)
 
-#### Auteurs et contributeurs
+#### Auteurs et contrbuiteurs
 Pierre-Antoine Rault ([@rigelk](https://github.com/rigelk)), Hugo Sanslaville, Ronan Bellego (Université de Nantes), et Sabrina Mugiwara, Guillaume Rousset (Polytech Nantes).
 
 #### Support / Contact
