@@ -1,3 +1,3 @@
 from django import get_version
 
-get_version()
+print(get_version())
