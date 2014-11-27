@@ -11,6 +11,8 @@ body{
 
 .container {
 	display: block;
+	/*width: 910px;*/
+	height: auto;
 	margin: 0px auto;
 }
 .well {
@@ -21,8 +23,10 @@ body{
 .iviewSlider {
 	overflow: hidden;
 	display: block;
-	height: 440px;
-	width: 900px;
+	height: 400px;
+	min-height: 200px;
+	max-width: 100%;
+	overflow: hidden;
 	border-radius: 4px;
 }
 
@@ -35,11 +39,9 @@ body{
 
 #iview2 {
 	display: block;
-	max-width: 960px;
-	min-width: 320px;
-	/*min-height: 140px;*/
-	/*width: 900px;
-	height: 430px;*/
+	max-width: 900px;
+	min-width: 330px;
+	height: auto;
 	background: #000;
 	background: rgba(0, 0, 0, 0.7);
 	padding: 15px;
@@ -56,22 +58,21 @@ body{
 /* Direction nav styles (e.g. Next & Prev) */
 .iview-directionNav {
 	position: absolute;
-	top: 0%;
+	top: 47%;
 	left: 0px;
-	height : 100%;
 	z-index: 9;
 	width: 100%;
+	z-index:9;
 }
 .iview-directionNav a {
 	display: block;
-	cursor: pointer;
-	position: absolute;
 	width: 40px;
 	height: 100px;
 	background-image: url(../img/nav_paddles.png);
 	text-indent: -9999px;
-	z-index: 9;
-	margin-top : 15%;
+	position:absolute;
+	top:45%;
+	cursor:pointer;
 }
 .iview-directionNav a:active {
 	background-image: url(../img/nav_paddles_down.png);
@@ -88,7 +89,7 @@ body{
 /* Control nav styles (e.g. 1,2,3...) */
 .iview-controlNav {
 	position:absolute;
-	bottom: 1%;
+	bottom: 1em;
 	right: 5%;
 	z-index:9;
 }
@@ -132,12 +133,81 @@ body{
 	text-align: center;
 }
 
-.ppButton{
-	display : block;
-	position : absolute;
-	margin-top: 4em;
-	width: 35px;
-	margin-left: 2em;
-	height: 35px;
-	z-index : 12;
+/*.iview-caption.video-caption {
+	padding: 10px;
+}*/
+
+
+
+/* The video show in the Slider */
+/*.iview-video-show {
+	background: #000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 101;
 }
+.iview-video-show .iview-video-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.iview-video-show .iview-video-container a.iview-video-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: #222;
+	color: #FFF;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	line-height: 29px;
+	font-size: 22px;
+	font-weight: bold;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.iview-video-show .iview-video-container a.iview-video-close:hover {
+	background: #444;
+}*/
+
+/* The timer in the Slider */
+/*#iview-timer {
+	position: absolute;
+	z-index: 100;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#iview-timer div {
+	border-radius: 3px;
+}*/
+  
+ /* CSS appliqué aux petits écrans */
+/*@media (max-width: 1024px) {
+	
+#iview2 {
+	width: 330px;
+	height: 200px;
+	border-radius: 5px;
+	margin: 10px auto;
+}
+.container {
+	width: 320px;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin : initial;
+}
+.iviewSlider {
+	height: 142px;
+	border-radius: 4px;
+}
+.iview-caption {
+	top: 128px;
+}
+.iview-directionNav {
+	top: 40px;
+}
+}*/

@@ -1,13 +1,4 @@
-/**
- * jQuery iView Slider v2.0
- * 
- * @version: 2.0.1 - August 17, 2012
- * 
- * @author: Hemn Chawroka
- *          hemn@iprodev.com
- *          http://iprodev.com/
- * 
- */ (function ($, window, undefined) {
+(function ($, window, undefined) {
 
 	var iView = function (el, options) {
 			//Get slider holder
@@ -52,7 +43,7 @@
 				slide.css('display', 'none');
 
 				//Find videos
-				if (slide.data("iview:type") == "video") {
+				/*if (slide.data("iview:type") == "video") {
 					var element = slide.children().eq(0),
 						video = $('<div class="iview-video-show"><div class="iview-video-container"><a class="iview-video-close" title="' + options.closeLabel + '">&#735;</a></div></div>');
 					slide.append(video);
@@ -65,7 +56,7 @@
 					slide.addClass('iview-video').css({
 						'cursor': 'pointer'
 					});
-				}
+				}*/
 
 				iv.defs.total++;
 			}).css({
@@ -338,7 +329,6 @@
 						'-ms-transform' : 'scale('+ ratio +')',
 						'transform' : 'scale('+ ratio +')'
 					});
-					t.css({ height: newHeight });
 					iv.defs.width = tW;
 					
 					//Set Timer Position
@@ -347,17 +337,17 @@
 			});
 			
 			//Bind video display
-			$('.iview-video', iv.slider).click(function(e){
+			/*$('.iview-video', iv.slider).click(function(e){
 				var t = $(this),
 					video = $('.iview-video-show', t);
 				if(!$(e.target).hasClass('iview-video-close') && !$(e.target).hasClass('iview-caption') && !$(e.target).parents().hasClass('iview-caption')){
 					video.show().animate({ top: 0 }, 1000, 'easeOutBounce');
 					iv.sliderContent.trigger('iView:pause');
 				}
-			});
+			});*/
 			
 			//Bind the video closer
-			$('.iview-video-close', iv.slider).click(function(){
+			/*$('.iview-video-close', iv.slider).click(function(){
 				var video = $(this).parents('.iview-video-show'),
 					iframe = $('iframe', video),
 					src = iframe.attr('src');
@@ -368,7 +358,7 @@
 					video.hide();
 					iv.sliderContent.trigger('iView:play');
 				});
-			});
+			});*/
 			
 		};
 
@@ -545,7 +535,7 @@
 			}
 
 			//Bind hover setting
-		/*	iv.sliderContent.bind('mouseover.iView mousemove.iView', function () {
+			/*iv.sliderContent.bind('mouseover.iView mousemove.iView', function () {
 				//Clear the timer
 				if (iv.options.pauseOnHover && !iv.defs.paused) iv.cleanTimer();
 
@@ -556,6 +546,9 @@
 				
 				iv.sliderContent.removeClass('iview-hover');
 			});*/
+			
+			//Bind pause setting
+			//iv.sliderContent.bind()
 		},
 
 		// setCaption function
@@ -581,7 +574,7 @@
 
 				var captionContain = $('.caption-contain', caption);
 
-				caption.css({
+				/*caption.css({
 					opacity: 0
 				});
 				captionContain.css({
@@ -703,7 +696,7 @@
 						top: 0,
 						left: 0
 					}, speed, easing);
-				}, (timeEx + 100));
+				}, (timeEx + 100));*/
 				timeEx += 250;
 			});
 		},
@@ -1670,10 +1663,10 @@
 	}
 
 
-	var supportTouch = !! ('ontouchstart' in window),
+	/*var supportTouch = !! ('ontouchstart' in window),
 		touchStartEvent = supportTouch ? "touchstart" : "mousedown",
 		touchStopEvent = supportTouch ? "touchend" : "mouseup",
-		touchMoveEvent = supportTouch ? "touchmove" : "mousemove";
+		touchMoveEvent = supportTouch ? "touchmove" : "mousemove";*/
 	// also handles swipeleft, swiperight
 	$.event.special.swipe = {
 		scrollSupressionThreshold: 10, // More than this horizontal displacement, and we will suppress scrolling.

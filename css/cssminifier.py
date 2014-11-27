@@ -35,4 +35,4 @@ for rule in re.findall( r'([^{]+){([^}]*)}', css ):
 
     # output rule if it contains any declarations
     if properties:
-        print("%s{%s}" % ( ','.join( selectors ), ''.join(['%s:%s;' % (key, properties[key]) for key in porder])[:-1] ))
+        print "%s{%s}" % ( ','.join( selectors ), ''.join(['%s:%s;' % (key, properties[key]) for key in porder])[:-1] )

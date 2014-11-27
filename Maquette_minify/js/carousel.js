@@ -19,20 +19,4 @@ $(document).ready(function(){
 		timerStroke: 8,
 		timerPosition: "bottom-right"
 	});
-	
-	 // Au survol du bouton, identifié par la classe pauseButton
-	$('.ppButton').on('click',function(){
-		if ($(this).attr('src') == 'img/pause.png') {
-			var src = 'img/play.png'
-			$(this).attr('src', src);
-
-			// On pause le slider iView, identifié par l'ID "slider"
-			$('#iview2').trigger('iView:pause');
-		} else {
-			var src = 'img/pause.png'
-			$(this).attr('src', src);
-			// On remet en marche le slider
-			$('#iview2').trigger('iView:play');
-		}
-	});
 });

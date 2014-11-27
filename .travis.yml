@@ -1,13 +1,18 @@
 language: python
+env:
+  global:
+  - secure: wPDlwhEMnmdtMUlXaxfn36u6I76cLACM5hMaAvpBvk57+Q9znOt6sZp+Ue6I1UYfpDk5nWULxyp1hZMkUu62oF2EfiTXmEp0ghmqtfOvAgySRJGVPWOU7K5t+nTCDiPBcpJbrR2SunMFnJvrX5n79kwaHZ8wqAgjTmbwvVbPq9Q=
+  - secure: CSMXYvkiQ8FPxQ55rHO3uNGlxlR+KrWhMTIB8Gm/IQaottV/CY6RPMwhGOhL2Z5aO8jBtqMCiUlBLhS3zPhS4atW0lTBqSTGm8lMQn23hBE9JR4Xw7BT3Prt3T3TzVsUr3glvL2kUmxxAyMeLEvP4f32OOkUZCy8oMQr6bWsVMI=
+  - secure: pMLAQCNLBOFe8UodTW0SEJo3ZU1q8wto4x9vIXt2q5ZnjfbusL8f3h/nJJIojJdb1L7lOMQnzFASFAhz+vp9ZgK9y66vevAlN3VIdOLZLnhq91kuTZfI2NtZ3qwQpq/mH4fgH4wn8yyTbLTfkJ6tGfScl0lswxJKx5DylhOxt8M=
+  - secure: jWdzoL6gnRZt2jBvBYBYwHhNs+rp/70s5Z6HRUAp37PNbJ0D6kwogx8zMf7pvSJf++/fZ9M2haYFIb6MmhXxBOQcYYY1uHfv+bDAAq4V7SXE0EENP5V4bl7i1CGzDFV0hakE6jo9Bpo0TiHhsUlwgz9S/KVn5ZotL3P+oubiRYU=
 python:
-  - 3.4
+- 3.4
 before_install:
-  - pip install pytest pytest-cov
-  - pip install coveralls
+- pip install pytest pytest-cov
+- pip install coveralls
 install:
-  - pip install -r requirements.txt
-script: # section obligatoire pour python
-  - echo "TODO"
-  - py.test --doctest-modules
+- pip install -r requirements.txt
+script:
+- echo "TODO"
 after_success:
-  - coveralls
+- curl -T uploadfilename -u $SCP_USER:$SCP_PASSWORD ftp://$SERVER_IP/$SERVER_PATH
