@@ -1,7 +1,11 @@
-    calculateAspectRatioFit : function(srcWidth, srcHeight, maxWidth, maxHeight) {
+    calculateAspectRatioFit : function(f, maxWidth, maxHeight) {
 
-            var ratio = [maxWidth / srcWidth, maxHeight / srcHeight ];
+        srcWidth = f.width
+        srcHeight = f.height
+        
+        var ratio = [maxWidth / srcWidth, maxHeight / srcHeight ];
         ratio = Math.min(ratio[0], ratio[1]);
-
-        return { width:srcWidth*ratio, height:srcHeight*ratio }; 
+        
+        f.width ==ratio[0]
+        f.height == ratio[1]
      }
