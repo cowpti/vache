@@ -1,13 +1,4 @@
-/**
- * jQuery iView Slider v2.0
- * 
- * @version: 2.0.1 - August 17, 2012
- * 
- * @author: Hemn Chawroka
- *          hemn@iprodev.com
- *          http://iprodev.com/
- * 
- */ (function ($, window, undefined) {
+(function ($, window, undefined) {
 
 	var iView = function (el, options) {
 			//Get slider holder
@@ -47,12 +38,12 @@
 				var slide = $(this);
 
 				//Find images & thumbnails
-				iv.defs.images.push(slide.data("iview:image"));
+				iv.defs.images.push(slide.data("iview-image"));
 				if (slide.data("iview:thumbnail")) iv.defs.images.push(slide.data("iview:thumbnail"));
 				slide.css('display', 'none');
 
 				//Find videos
-				if (slide.data("iview:type") == "video") {
+				/*if (slide.data("iview:type") == "video") {
 					var element = slide.children().eq(0),
 						video = $('<div class="iview-video-show"><div class="iview-video-container"><a class="iview-video-close" title="' + options.closeLabel + '">&#735;</a></div></div>');
 					slide.append(video);
@@ -65,7 +56,7 @@
 					slide.addClass('iview-video').css({
 						'cursor': 'pointer'
 					});
-				}
+				}*/
 
 				iv.defs.total++;
 			}).css({
@@ -309,7 +300,7 @@
 				if (iv.defs.lock || iv.defs.slide == slide) return false;
 				if ($(this).hasClass('active')) return false;
 				iv.cleanTimer();
-				iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+				iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 				iv.defs.slide = slide - 1;
 				iv.goTo('control');
 			});
@@ -347,17 +338,17 @@
 			});
 			
 			//Bind video display
-			$('.iview-video', iv.slider).click(function(e){
+			/*$('.iview-video', iv.slider).click(function(e){
 				var t = $(this),
 					video = $('.iview-video-show', t);
 				if(!$(e.target).hasClass('iview-video-close') && !$(e.target).hasClass('iview-caption') && !$(e.target).parents().hasClass('iview-caption')){
 					video.show().animate({ top: 0 }, 1000, 'easeOutBounce');
 					iv.sliderContent.trigger('iView:pause');
 				}
-			});
+			});*/
 			
 			//Bind the video closer
-			$('.iview-video-close', iv.slider).click(function(){
+			/*$('.iview-video-close', iv.slider).click(function(){
 				var video = $(this).parents('.iview-video-show'),
 					iframe = $('iframe', video),
 					src = iframe.attr('src');
@@ -368,7 +359,7 @@
 					video.hide();
 					iv.sliderContent.trigger('iView:play');
 				});
-			});
+			});*/
 			
 		};
 
@@ -381,7 +372,7 @@
 			var iv = this;
 			
 			var img = new Image();
-			img.src = iv.slides.eq(0).data('iview:image');
+			img.src = iv.slides.eq(0).data('iview-image');
 			imgWidth = img.width;
 			if(imgWidth != iv.defs.width){
 				iv.defs.width = imgWidth;
@@ -394,7 +385,7 @@
 			iv.slides.eq(iv.defs.slide).css('display', 'block');
 
 			//Set first background
-			iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+			iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 
 			//Set initial caption
 			iv.setCaption(iv.options);
@@ -448,10 +439,10 @@
 					var slide = iv.slides.eq(i);
 					iviewControl += '<li>';
 					if (iv.options.controlNavThumbs) {
-						var thumb = (slide.data('iview:thumbnail')) ? slide.data('iview:thumbnail') : slide.data('iview:image');
+						var thumb = (slide.data('iview:thumbnail')) ? slide.data('iview:thumbnail') : slide.data('iview-image');
 						iviewControl += '<a class="iview-control" rel="' + i + '"><img src="' + thumb + '" /></a>';
 					} else {
-						var thumb = (slide.data('iview:thumbnail')) ? slide.data('iview:thumbnail') : slide.data('iview:image');
+						var thumb = (slide.data('iview:thumbnail')) ? slide.data('iview:thumbnail') : slide.data('iview-image');
 						iviewControl += '<a class="iview-control" rel="' + i + '">' + (i + 1) + '</a>';
 						if (iv.options.controlNavTooltip) iviewTooltip += '<div rel="' + i + '"><img src="' + thumb + '" /></div>';
 					}
@@ -485,7 +476,7 @@
 					if (iv.defs.lock) return false;
 					if ($(this).hasClass('active')) return false;
 					iv.cleanTimer();
-					iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+					iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 					iv.defs.slide = $(this).attr('rel') - 1;
 					iv.goTo('control');
 				});
@@ -743,7 +734,7 @@
 			//Diplay the current slide
 			iv.slides.eq(iv.defs.slide).show();
 
-			iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+			iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 
 			// Remove any strips and blocks from last transition
 			$('.iview-strip, .iview-block', iv.slider).remove();
@@ -792,7 +783,7 @@
 					height: height,
 					top: top,
 					left: left,
-					background: 'url("' + iv.defs.image.data('iview:image') + '") no-repeat ' + bgPosition,
+					background: 'url("' + iv.defs.image.data('iview-image') + '") no-repeat ' + bgPosition,
 					opacity: 0
 				});
 
@@ -821,7 +812,7 @@
 						height: blockHeight + 'px',
 						top: (rows * blockHeight) + 'px',
 						left: (columns * blockWidth) + 'px',
-						background: 'url("' + iv.defs.image.data('iview:image') + '") no-repeat ' + bgPosition,
+						background: 'url("' + iv.defs.image.data('iview-image') + '") no-repeat ' + bgPosition,
 						opacity: 0
 					});
 					
@@ -1348,10 +1339,10 @@
 
 			//Set current background before change
 			if (!action) {
-				iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+				iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 			} else {
 				if (action == 'prev' || action == 'next') {
-					iv.slider.css('background', 'url("' + iv.defs.image.data('iview:image') + '") no-repeat');
+					iv.slider.css('background', 'url("' + iv.defs.image.data('iview-image') + '") no-repeat');
 				}
 			}
 			iv.defs.slide++;

@@ -1,2 +1,4 @@
 django
 pymongo
+Wand
+django-htmlmin
